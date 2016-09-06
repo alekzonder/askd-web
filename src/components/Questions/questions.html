@@ -1,0 +1,11 @@
+<table class="ui very basic table" v-if="questionData">
+
+        <tbody
+            is="question"
+            v-for="question in questionData.questions"
+            :question="question"
+            :answer-count="questionData.answerCounts[question.id]"
+            :user="questionData.users[question.userId]">
+        </tbody>
+
+</table>

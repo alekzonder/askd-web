@@ -1,0 +1,8 @@
+<table class="ui very basic table">
+    <tbody
+        is="answer"
+        v-for="answer in data.answers"
+        :answer="answer"
+        :user="data.users[answer.userId]"
+    ></tbody>
+</table>

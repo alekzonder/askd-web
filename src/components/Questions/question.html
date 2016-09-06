@@ -1,0 +1,30 @@
+<tr>
+    <td>
+        <div class="ui basic center aligned segment">
+            {{answerCount}}
+            <br> answers
+        </div>
+    </td>
+    <td>
+        <a v-on:click="goQuestion($event)" href="/q/{{question.id}}">{{question.title}}</a>
+        <table class="ui very basic table">
+            <tr>
+                <td>
+                    <!-- <div class="ui label">
+                        <a href="">project-n1</a>
+                    </div>
+                    <div class="ui label">
+                        <a href="">FE</a>
+                    </div>
+                    <div class="ui label">
+                        <a href="">bug</a>
+                    </div> -->
+                </td>
+                <td class="right aligned">
+                    asked {{datetime}} by <a v-on:click="goUser($event)" href="/user/{{user.login}}">{{user.login}}</a>
+                </td>
+            </tr>
+        </table>
+
+    </td>
+</tr>

@@ -1,0 +1,39 @@
+<div class="two wide column">
+    <div class="ui container">
+
+    </div>
+</div>
+<div class="twelve wide column">
+    <div class="ui container">
+        <div v-show="loading" class="ui active loader"></div>
+
+            <div class="ui hidden divider"></div>
+
+            <h3 class="ui header">{{question.title}}</h3>
+
+            <div class="ui divider"></div>
+
+            <p>{{{renderedText}}}</p>
+
+            <table class="ui very basic table">
+                <tr>
+                    <td></td>
+                    <td class="right aligned">asked {{datetime}} by <a href="/user/{{user.login}}">{{user.login}}</a></td>
+                </tr>
+            </table>
+
+            <h4>{{answerCount}} answers</h4>
+
+            <div class="ui divider"></div>
+
+            <answers :data="answersData"></answers>
+
+
+
+    </div>
+</div>
+<div class="two wide column">
+    <div class="ui container">
+
+    </div>
+</div>
