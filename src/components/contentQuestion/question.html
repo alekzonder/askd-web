@@ -3,7 +3,7 @@
 
     </div>
 </div>
-<div class="twelve wide column">
+<div class="nine wide column">
     <div class="ui container">
         <div v-show="loading" class="ui active loader"></div>
 
@@ -28,6 +28,10 @@
 
             <answers :data="answersData"></answers>
 
+            <answer-form v-ref:answer-form @answer-post="postAnswer"></answer-form>
+
+            <br>
+            <br>
 
 
     </div>

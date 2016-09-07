@@ -17,7 +17,7 @@ var Answers = Abstract.extends({
 
         return new Promise(function (resolve, reject) {
 
-            var request = superagent.get(that._base + '/answers/');
+            var request = superagent.get(that._base + '/answers');
 
             request.query({questionId: questionId});
 
@@ -36,6 +36,31 @@ var Answers = Abstract.extends({
                 });
 
             });
+        });
+
+    },
+
+    postAnswer(questionId, text) {
+
+        var that = this;
+
+        return new Promise(function (resolve, reject) {
+
+            var request = superagent.post(that._base + '/answers');
+
+            request.send({
+                questionId: questionId,
+                text: text
+            });
+
+            request.end(function (error, res) {
+                if (error) {
+                    return reject(error);
+                }
+
+                resolve(res.body.result);
+            });
+
         });
 
     }

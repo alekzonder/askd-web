@@ -12,7 +12,8 @@
                 <td>
                 </td>
                 <td class="right aligned">
-                    answered {{datetime}} by <a v-on:click="goUser($event)" href="/user/{{user.login}}">{{user.login}}</a>
+                    answered {{datetime}} by <strong>{{user.login}}</strong>
+                    <!-- <a v-on:click="goUser($event)" href="/user/{{user.login}}">{{user.login}}</a> -->
                 </td>
             </tr>
         </table>

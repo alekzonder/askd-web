@@ -1,0 +1,20 @@
+<div class="ui form">
+    <div class="ui message" v-show="error">
+        <div class="header">We had some errors</div>
+        <ul class="list">
+          <li>{{error}}</li>
+        </ul>
+    </div>
+    <div class="field" v-show="!answerSent" :class="{error: error}">
+        <textarea v-model="text"></textarea>
+    </div>
+
+    <button
+        v-show="!answerSent"
+        class="ui button"
+        type="submit"
+        v-on:click="postAnswer($event)">Post answer</button>
+
+    <div v-show="answerSent" class="ui small header">Your answer posted successfully</div>
+    <button v-show="answerSent" class="ui button" v-on:click="oneMoreAnswer($event)">Post one more answer</button>
+</div>

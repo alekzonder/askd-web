@@ -76,10 +76,61 @@ module.exports = Abstract.extend({
     },
 
     methods: {
+        postAnswer: function (text) {
 
+            var that = this;
+
+            this.getApi().answers.postAnswer(this.question.id, text)
+                .then(function (answer) {
+                    that.answersData.answers.push(answer);
+                    that.answerCount++;
+                    that.$refs.answerForm.$emit('answerSent');
+                })
+                .catch(function (error) {
+                    that.logError(error);
+                });
+        }
     },
 
     components: {
-        answers: require('../Answers')
+        answers: require('../Answers'),
+        answerForm: {
+
+            template: require('./answerForm.html'),
+
+            data: function () {
+                return {
+                    text: null,
+                    answerSent: false,
+                    error: null
+                };
+            },
+
+            events: {
+                answerSent: function () {
+                    this.text = null;
+                    this.error = null;
+                    this.answerSent = true;
+                }
+            },
+
+            methods: {
+                postAnswer: function (event) {
+                    event.preventDefault();
+                    this.error = null;
+
+                    if (!this.text) {
+                        this.error = 'Answer text required';
+                        return;
+                    }
+
+                    this.$emit('answer-post', this.text);
+                },
+                oneMoreAnswer: function (event) {
+                    event.preventDefault();
+                    this.answerSent = false;
+                }
+            }
+        }
     }
 });
