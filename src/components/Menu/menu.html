@@ -1,7 +1,8 @@
-<div class="ui tiny menu">
+<div class="ui mini menu">
 
     <a class="item" href="/" v-on:click="navigate($event)"><strong>askd</strong></a>
     <a class="item" href="/" v-on:click="navigate($event)">questions</a>
+
 
     <div class="right menu">
         <!-- <div class="ui dropdown item">
@@ -12,6 +13,9 @@
                 <a class="item">Spanish</a>
             </div>
         </div> -->
+        <a class="item" href="/ask" v-on:click="navigate($event)">
+            <i class="announcement icon"></i> ask question
+        </a>
         <div class="item">
             <div class="ui primary button">Sign Up</div>
         </div>

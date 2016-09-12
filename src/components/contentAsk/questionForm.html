@@ -1,0 +1,24 @@
+<div>
+    <h2 v-show="questionSent">Your question successfully sent</h2>
+    <p v-show="questionSent">
+        <a href="/q/{{id}}" v-on:click="navigate($event)">Go to question page</a>
+    </p>
+    <div class="ui form" v-show="!questionSent" :class="{loading: loading}">
+        <div class="ui message" v-show="error">
+            <div class="header">We had some errors</div>
+            <ul class="list">
+                <li>{{error}}</li>
+            </ul>
+        </div>
+
+        <div class="field">
+            <input type="text" v-model="title" placeholder="type your question here"></input>
+        </div>
+
+        <div class="field">
+            <textarea v-model="text" placeholder="and more details"></textarea>
+        </div>
+
+        <button class="ui button" type="submit" v-on:click="post($event)">Ask question</button>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="two wide column">
+    <div class="ui container">
+
+    </div>
+</div>
+<div class="nine wide column">
+    <div class="ui one column grid">
+
+        <div v-show="loading" class="ui active loader"></div>
+
+        <div class="one column row">
+            <div class="column">
+                <div class="ui hidden divider"></div>
+
+                <h2>Ask your question</h2>
+
+                <question-form v-ref:question-form v-on:question_post="postQuestion"></question-form>
+
+            </div>
+        </div>
+
+        <div class="one column row">
+            <div class="twelve wide column">
+            </div>
+
+        </div>
+
+        <div class="ui hidden divider"></div>
+
+    </div>
+
+</div>
+<div class="two wide column">
+    <div class="ui container">
+
+    </div>
+</div>

@@ -3,38 +3,51 @@
 
     </div>
 </div>
-<div class="nine wide column">
-    <div class="ui container">
+<div class="eleven wide column">
+    <div class="ui one column grid">
+
         <div v-show="loading" class="ui active loader"></div>
 
-            <div class="ui hidden divider"></div>
+        <div class="one column row">
+            <div class="column">
+                <div class="ui hidden divider"></div>
 
-            <h3 class="ui header">{{question.title}}</h3>
+                <h3 class="ui header">{{question.title}}</h3>
 
-            <div class="ui divider"></div>
+                <div class="ui divider"></div>
 
-            <p>{{{renderedText}}}</p>
+                <p>{{{renderedText}}}</p>
 
-            <table class="ui very basic table">
-                <tr>
-                    <td></td>
-                    <td class="right aligned">asked {{datetime}} by <a href="/user/{{user.login}}">{{user.login}}</a></td>
-                </tr>
-            </table>
+                <table class="ui very basic table">
+                    <tr>
+                        <td></td>
+                        <td class="right aligned">asked {{datetime}} by <a href="/user/{{user.login}}">{{user.login}}</a></td>
+                    </tr>
+                </table>
 
-            <h4>{{answerCount}} answers</h4>
+                <h4>{{answerCount}} answers</h4>
 
-            <div class="ui divider"></div>
+                <div class="ui divider"></div>
+            </div>
+        </div>
 
-            <answers :data="answersData"></answers>
+        <div class="one column row">
+            <div class="twelve wide column">
+                <answers :data="answersData"></answers>
+            </div>
 
-            <answer-form v-ref:answer-form @answer-post="postAnswer"></answer-form>
+        </div>
 
-            <br>
-            <br>
+        <div class="one column row">
+            <div class="twelve wide column">
+                <answer-form v-ref:answer-form @answer-post="postAnswer"></answer-form>
+            </div>
+        </div>
 
+        <div class="ui hidden divider"></div>
 
     </div>
+
 </div>
 <div class="two wide column">
     <div class="ui container">

@@ -61,6 +61,31 @@ var Questions = Abstract.extends({
 
         });
 
+    },
+
+    post: function (question) {
+
+        var that = this;
+
+        return new Promise(function (resolve, reject) {
+            var request = superagent.post(that._base + '/questions');
+
+            request.send(question);
+
+            request.end(function (err, res) {
+
+                if (err) {
+                    return reject(err);
+                }
+
+                var body = res.body;
+
+                resolve(body.result);
+
+            });
+        });
+
+
     }
 
 });

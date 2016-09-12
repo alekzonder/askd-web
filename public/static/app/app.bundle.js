@@ -1765,7 +1765,7 @@ webpackJsonp([0,1],[
                 module && module.exports) {
             try {
                 oldLocale = globalLocale._abbr;
-                __webpack_require__(198)("./" + name);
+                __webpack_require__(201)("./" + name);
                 // because defineLocale currently also sets the global locale, we
                 // want to undo that for lazy loaded locales
                 locale_locales__getSetGlobalLocale(oldLocale);
@@ -4389,7 +4389,7 @@ function isWhiteSpace(code) {
 ////////////////////////////////////////////////////////////////////////////////
 
 /*eslint-disable max-len*/
-var UNICODE_PUNCT_RE = __webpack_require__(12);
+var UNICODE_PUNCT_RE = __webpack_require__(13);
 
 // Currently without astral characters support.
 function isPunctChar(ch) {
@@ -4461,7 +4461,7 @@ function normalizeReference(str) {
 //
 exports.lib                 = {};
 exports.lib.mdurl           = __webpack_require__(19);
-exports.lib.ucmicro         = __webpack_require__(207);
+exports.lib.ucmicro         = __webpack_require__(210);
 
 exports.assign              = assign;
 exports.isString            = isString;
@@ -21533,6 +21533,17 @@ module.exports = function(module) {
 
 /***/ },
 /* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+
+module.exports = __webpack_require__(158);
+
+
+/***/ },
+/* 9 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -21587,7 +21598,7 @@ module.exports = function parseLinkLabel(state, start, disableNested) {
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -21946,7 +21957,7 @@ module.exports = Ruler;
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -22150,7 +22161,7 @@ module.exports = Token;
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 /**
@@ -22168,7 +22179,7 @@ if (typeof window !== 'undefined') { // Browser window
 }
 
 var Emitter = __webpack_require__(138);
-var requestBase = __webpack_require__(204);
+var requestBase = __webpack_require__(207);
 var isObject = __webpack_require__(123);
 
 /**
@@ -22181,7 +22192,7 @@ function noop(){};
  * Expose `request`.
  */
 
-var request = module.exports = __webpack_require__(205).bind(null, Request);
+var request = module.exports = __webpack_require__(208).bind(null, Request);
 
 /**
  * Determine XHR.
@@ -23132,13 +23143,13 @@ request.put = function(url, data, fn){
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 module.exports=/[!-#%-\*,-/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E42\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC9\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9]|\uD805[\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDF3C-\uDF3E]|\uD809[\uDC70-\uDC74]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]/
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -23239,17 +23250,6 @@ module.exports = Chain;
 
 
 /***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-'use strict';
-
-
-module.exports = __webpack_require__(155);
-
-
-/***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -23259,7 +23259,7 @@ module.exports = __webpack_require__(155);
 'use strict';
 
 /*eslint quotes:0*/
-module.exports = __webpack_require__(149);
+module.exports = __webpack_require__(152);
 
 
 /***/ },
@@ -23559,10 +23559,10 @@ module.exports.postProcess = function strikethrough(state) {
 'use strict';
 
 
-module.exports.encode = __webpack_require__(195);
-module.exports.decode = __webpack_require__(194);
-module.exports.format = __webpack_require__(196);
-module.exports.parse  = __webpack_require__(197);
+module.exports.encode = __webpack_require__(198);
+module.exports.decode = __webpack_require__(197);
+module.exports.format = __webpack_require__(199);
+module.exports.parse  = __webpack_require__(200);
 
 
 /***/ },
@@ -33572,8 +33572,8 @@ module.exports=/[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-
 /* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
-var _ = __webpack_require__(152);
-var request = __webpack_require__(11);
+var _ = __webpack_require__(155);
+var request = __webpack_require__(12);
 
 function Abstract(config, api) {
     this._config = config;
@@ -33967,7 +33967,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
    * Module dependencies.
    */
 
-  var pathtoRegexp = __webpack_require__(199);
+  var pathtoRegexp = __webpack_require__(202);
 
   /**
    * Module exports.
@@ -34591,8 +34591,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
 "use strict";
 'use strict';
 
-var Stringify = __webpack_require__(202);
-var Parse = __webpack_require__(201);
+var Stringify = __webpack_require__(205);
+var Parse = __webpack_require__(204);
 
 module.exports = {
     stringify: Stringify,
@@ -34608,7 +34608,7 @@ module.exports = {
 
   var vSortable = {}
   var Sortable =  true
-      ? __webpack_require__(203)
+      ? __webpack_require__(206)
       : window.Sortable
 
   if (!Sortable) {
@@ -44741,8 +44741,8 @@ var _ = __webpack_require__(3);
 module.exports = function(config) {
 
     var classes = {
-        Questions: __webpack_require__(209),
-        Answers: __webpack_require__(208)
+        Questions: __webpack_require__(212),
+        Answers: __webpack_require__(211)
     };
 
     var api = {};
@@ -44777,7 +44777,7 @@ module.exports = Abstract.extend({
     },
 
     components: {
-        menu: __webpack_require__(211),
+        menu: __webpack_require__(214),
         // userMenu: require('../UserMenu')
     }
 
@@ -44789,9 +44789,10 @@ module.exports = Abstract.extend({
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = {
-    'main-page': __webpack_require__(214),
-    'empty-page': __webpack_require__(213),
-    'question-page': __webpack_require__(215)
+    'main-page': __webpack_require__(218),
+    'empty-page': __webpack_require__(217),
+    'question-page': __webpack_require__(219),
+    'ask-page': __webpack_require__(216)
 };
 
 
@@ -44809,6 +44810,11 @@ module.exports = [
         route: '/q/:id',
         method: 'get',
         component: 'question-page'
+    },
+    {
+        route: '/ask',
+        method: 'get',
+        component: 'ask-page'
     }
 ];
 
@@ -44998,7 +45004,7 @@ module.exports = "<table class=\"ui very basic table\">\n    <tbody\n        is=
 /* 141 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"ui tiny menu\">\n\n    <a class=\"item\" href=\"/\" v-on:click=\"navigate($event)\"><strong>askd</strong></a>\n    <a class=\"item\" href=\"/\" v-on:click=\"navigate($event)\">questions</a>\n\n    <div class=\"right menu\">\n        <!-- <div class=\"ui dropdown item\">\n            Language <i class=\"dropdown icon\"></i>\n            <div class=\"menu\">\n                <a class=\"item\">English</a>\n                <a class=\"item\">Russian</a>\n                <a class=\"item\">Spanish</a>\n            </div>\n        </div> -->\n        <div class=\"item\">\n            <div class=\"ui primary button\">Sign Up</div>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"ui mini menu\">\n\n    <a class=\"item\" href=\"/\" v-on:click=\"navigate($event)\"><strong>askd</strong></a>\n    <a class=\"item\" href=\"/\" v-on:click=\"navigate($event)\">questions</a>\n\n\n    <div class=\"right menu\">\n        <!-- <div class=\"ui dropdown item\">\n            Language <i class=\"dropdown icon\"></i>\n            <div class=\"menu\">\n                <a class=\"item\">English</a>\n                <a class=\"item\">Russian</a>\n                <a class=\"item\">Spanish</a>\n            </div>\n        </div> -->\n        <a class=\"item\" href=\"/ask\" v-on:click=\"navigate($event)\">\n            <i class=\"announcement icon\"></i> ask question\n        </a>\n        <div class=\"item\">\n            <div class=\"ui primary button\">Sign Up</div>\n        </div>\n    </div>\n</div>";
 
 /***/ },
 /* 142 */
@@ -45022,22 +45028,40 @@ module.exports = "<table class=\"ui very basic table\" v-if=\"questionData\">\n\
 /* 145 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n<div class=\"twelve wide column\">\n    <div class=\"ui container\">\n        <div class=\"ui active loader\"></div>\n    </div>\n</div>\n<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n";
+module.exports = "<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n<div class=\"nine wide column\">\n    <div class=\"ui one column grid\">\n\n        <div v-show=\"loading\" class=\"ui active loader\"></div>\n\n        <div class=\"one column row\">\n            <div class=\"column\">\n                <div class=\"ui hidden divider\"></div>\n\n                <h2>Ask your question</h2>\n\n                <question-form v-ref:question-form v-on:question_post=\"postQuestion\"></question-form>\n\n            </div>\n        </div>\n\n        <div class=\"one column row\">\n            <div class=\"twelve wide column\">\n            </div>\n\n        </div>\n\n        <div class=\"ui hidden divider\"></div>\n\n    </div>\n\n</div>\n<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>";
 
 /***/ },
 /* 146 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n<div class=\"twelve wide column\">\n    <div class=\"ui container\">\n        <div v-show=\"loading\" class=\"ui active loader\"></div>\n        <div class=\"ui hidden divider\"></div>\n        <questions v-ref:questions :question-data=\"questionData\"></questions>\n    </div>\n</div>\n<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>";
+module.exports = "<div>\n    <h2 v-show=\"questionSent\">Your question successfully sent</h2>\n    <p v-show=\"questionSent\">\n        <a href=\"/q/{{id}}\" v-on:click=\"navigate($event)\">Go to question page</a>\n    </p>\n    <div class=\"ui form\" v-show=\"!questionSent\" :class=\"{loading: loading}\">\n        <div class=\"ui message\" v-show=\"error\">\n            <div class=\"header\">We had some errors</div>\n            <ul class=\"list\">\n                <li>{{error}}</li>\n            </ul>\n        </div>\n\n        <div class=\"field\">\n            <input type=\"text\" v-model=\"title\" placeholder=\"type your question here\"></input>\n        </div>\n\n        <div class=\"field\">\n            <textarea v-model=\"text\" placeholder=\"and more details\"></textarea>\n        </div>\n\n        <button class=\"ui button\" type=\"submit\" v-on:click=\"post($event)\">Ask question</button>\n    </div>\n</div>";
 
 /***/ },
 /* 147 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n<div class=\"nine wide column\">\n    <div class=\"ui container\">\n        <div v-show=\"loading\" class=\"ui active loader\"></div>\n\n            <div class=\"ui hidden divider\"></div>\n\n            <h3 class=\"ui header\">{{question.title}}</h3>\n\n            <div class=\"ui divider\"></div>\n\n            <p>{{{renderedText}}}</p>\n\n            <table class=\"ui very basic table\">\n                <tr>\n                    <td></td>\n                    <td class=\"right aligned\">asked {{datetime}} by <a href=\"/user/{{user.login}}\">{{user.login}}</a></td>\n                </tr>\n            </table>\n\n            <h4>{{answerCount}} answers</h4>\n\n            <div class=\"ui divider\"></div>\n\n            <answers :data=\"answersData\"></answers>\n\n            <answer-form v-ref:answer-form @answer-post=\"postAnswer\"></answer-form>\n\n            <br>\n            <br>\n\n\n    </div>\n</div>\n<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>";
+module.exports = "<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n<div class=\"twelve wide column\">\n    <div class=\"ui container\">\n        <div class=\"ui active loader\"></div>\n    </div>\n</div>\n<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n";
 
 /***/ },
 /* 148 */
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n<div class=\"twelve wide column\">\n    <div class=\"ui container\">\n        <div v-show=\"loading\" class=\"ui active loader\"></div>\n        <div class=\"ui hidden divider\"></div>\n        <questions v-ref:questions :question-data=\"questionData\"></questions>\n    </div>\n</div>\n<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>";
+
+/***/ },
+/* 149 */
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"ui form\">\n    <div class=\"ui message\" v-show=\"error\">\n        <div class=\"header\">We had some errors</div>\n        <ul class=\"list\">\n          <li>{{error}}</li>\n        </ul>\n    </div>\n    <div class=\"field\" v-show=\"!answerSent\" :class=\"{error: error}\">\n        <textarea v-model=\"text\"></textarea>\n    </div>\n\n    <button\n        v-show=\"!answerSent\"\n        class=\"ui button\"\n        type=\"submit\"\n        v-on:click=\"postAnswer($event)\">Post answer</button>\n\n    <div v-show=\"answerSent\" class=\"ui small header\">Your answer posted successfully</div>\n    <button v-show=\"answerSent\" class=\"ui button\" v-on:click=\"oneMoreAnswer($event)\">Post one more answer</button>\n</div>";
+
+/***/ },
+/* 150 */
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>\n<div class=\"eleven wide column\">\n    <div class=\"ui one column grid\">\n\n        <div v-show=\"loading\" class=\"ui active loader\"></div>\n\n        <div class=\"one column row\">\n            <div class=\"column\">\n                <div class=\"ui hidden divider\"></div>\n\n                <h3 class=\"ui header\">{{question.title}}</h3>\n\n                <div class=\"ui divider\"></div>\n\n                <p>{{{renderedText}}}</p>\n\n                <table class=\"ui very basic table\">\n                    <tr>\n                        <td></td>\n                        <td class=\"right aligned\">asked {{datetime}} by <a href=\"/user/{{user.login}}\">{{user.login}}</a></td>\n                    </tr>\n                </table>\n\n                <h4>{{answerCount}} answers</h4>\n\n                <div class=\"ui divider\"></div>\n            </div>\n        </div>\n\n        <div class=\"one column row\">\n            <div class=\"twelve wide column\">\n                <answers :data=\"answersData\"></answers>\n            </div>\n\n        </div>\n\n        <div class=\"one column row\">\n            <div class=\"twelve wide column\">\n                <answer-form v-ref:answer-form @answer-post=\"postAnswer\"></answer-form>\n            </div>\n        </div>\n\n        <div class=\"ui hidden divider\"></div>\n\n    </div>\n\n</div>\n<div class=\"two wide column\">\n    <div class=\"ui container\">\n\n    </div>\n</div>";
+
+/***/ },
+/* 151 */
 /***/ function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -45046,7 +45070,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ },
-/* 149 */
+/* 152 */
 /***/ function(module, exports) {
 
 module.exports = {
@@ -47178,7 +47202,7 @@ module.exports = {
 };
 
 /***/ },
-/* 150 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47334,7 +47358,7 @@ function createNormalizer() {
 function compile(self) {
 
   // Load & clone RE patterns.
-  var re = self.re = __webpack_require__(151)(self.__opts__);
+  var re = self.re = __webpack_require__(154)(self.__opts__);
 
   // Define dynamic patterns
   var tlds = self.__tlds__.slice();
@@ -47822,7 +47846,7 @@ module.exports = LinkifyIt;
 
 
 /***/ },
-/* 151 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47836,7 +47860,7 @@ module.exports = function (opts) {
   re.src_Any = __webpack_require__(126).source;
   re.src_Cc  = __webpack_require__(124).source;
   re.src_Z   = __webpack_require__(125).source;
-  re.src_P   = __webpack_require__(12).source;
+  re.src_P   = __webpack_require__(13).source;
 
   // \p{\Z\P\Cc\CF} (white spaces + control + format + punctuation)
   re.src_ZPCc = [ re.src_Z, re.src_P, re.src_Cc ].join('|');
@@ -48002,7 +48026,7 @@ module.exports = function (opts) {
 
 
 /***/ },
-/* 152 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -51815,7 +51839,7 @@ module.exports = function (opts) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(7)(module)))
 
 /***/ },
-/* 153 */
+/* 156 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -51890,7 +51914,7 @@ module.exports = [
 
 
 /***/ },
-/* 154 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51898,13 +51922,13 @@ module.exports = [
 'use strict';
 
 
-exports.parseLinkLabel       = __webpack_require__(8);
+exports.parseLinkLabel       = __webpack_require__(9);
 exports.parseLinkDestination = __webpack_require__(4);
 exports.parseLinkTitle       = __webpack_require__(5);
 
 
 /***/ },
-/* 155 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51914,20 +51938,20 @@ exports.parseLinkTitle       = __webpack_require__(5);
 
 
 var utils        = __webpack_require__(1);
-var helpers      = __webpack_require__(154);
-var Renderer     = __webpack_require__(162);
-var ParserCore   = __webpack_require__(157);
-var ParserBlock  = __webpack_require__(156);
-var ParserInline = __webpack_require__(158);
-var LinkifyIt    = __webpack_require__(150);
+var helpers      = __webpack_require__(157);
+var Renderer     = __webpack_require__(165);
+var ParserCore   = __webpack_require__(160);
+var ParserBlock  = __webpack_require__(159);
+var ParserInline = __webpack_require__(161);
+var LinkifyIt    = __webpack_require__(153);
 var mdurl        = __webpack_require__(19);
-var punycode     = __webpack_require__(200);
+var punycode     = __webpack_require__(203);
 
 
 var config = {
-  'default': __webpack_require__(160),
-  zero: __webpack_require__(161),
-  commonmark: __webpack_require__(159)
+  'default': __webpack_require__(163),
+  zero: __webpack_require__(164),
+  commonmark: __webpack_require__(162)
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -52488,7 +52512,7 @@ module.exports = MarkdownIt;
 
 
 /***/ },
-/* 156 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52500,23 +52524,23 @@ module.exports = MarkdownIt;
 'use strict';
 
 
-var Ruler           = __webpack_require__(9);
+var Ruler           = __webpack_require__(10);
 
 
 var _rules = [
   // First 2 params - rule name & source. Secondary array - list of rules,
   // which can be terminated by this one.
-  [ 'table',      __webpack_require__(174),      [ 'paragraph', 'reference' ] ],
-  [ 'code',       __webpack_require__(164) ],
-  [ 'fence',      __webpack_require__(165),      [ 'paragraph', 'reference', 'blockquote', 'list' ] ],
-  [ 'blockquote', __webpack_require__(163), [ 'paragraph', 'reference', 'list' ] ],
-  [ 'hr',         __webpack_require__(167),         [ 'paragraph', 'reference', 'blockquote', 'list' ] ],
-  [ 'list',       __webpack_require__(170),       [ 'paragraph', 'reference', 'blockquote' ] ],
-  [ 'reference',  __webpack_require__(172) ],
-  [ 'heading',    __webpack_require__(166),    [ 'paragraph', 'reference', 'blockquote' ] ],
-  [ 'lheading',   __webpack_require__(169) ],
-  [ 'html_block', __webpack_require__(168), [ 'paragraph', 'reference', 'blockquote' ] ],
-  [ 'paragraph',  __webpack_require__(171) ]
+  [ 'table',      __webpack_require__(177),      [ 'paragraph', 'reference' ] ],
+  [ 'code',       __webpack_require__(167) ],
+  [ 'fence',      __webpack_require__(168),      [ 'paragraph', 'reference', 'blockquote', 'list' ] ],
+  [ 'blockquote', __webpack_require__(166), [ 'paragraph', 'reference', 'list' ] ],
+  [ 'hr',         __webpack_require__(170),         [ 'paragraph', 'reference', 'blockquote', 'list' ] ],
+  [ 'list',       __webpack_require__(173),       [ 'paragraph', 'reference', 'blockquote' ] ],
+  [ 'reference',  __webpack_require__(175) ],
+  [ 'heading',    __webpack_require__(169),    [ 'paragraph', 'reference', 'blockquote' ] ],
+  [ 'lheading',   __webpack_require__(172) ],
+  [ 'html_block', __webpack_require__(171), [ 'paragraph', 'reference', 'blockquote' ] ],
+  [ 'paragraph',  __webpack_require__(174) ]
 ];
 
 
@@ -52613,14 +52637,14 @@ ParserBlock.prototype.parse = function (src, md, env, outTokens) {
 };
 
 
-ParserBlock.prototype.State = __webpack_require__(173);
+ParserBlock.prototype.State = __webpack_require__(176);
 
 
 module.exports = ParserBlock;
 
 
 /***/ },
-/* 157 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52633,16 +52657,16 @@ module.exports = ParserBlock;
 'use strict';
 
 
-var Ruler  = __webpack_require__(9);
+var Ruler  = __webpack_require__(10);
 
 
 var _rules = [
-  [ 'normalize',      __webpack_require__(178)      ],
-  [ 'block',          __webpack_require__(175)          ],
-  [ 'inline',         __webpack_require__(176)         ],
-  [ 'linkify',        __webpack_require__(177)        ],
-  [ 'replacements',   __webpack_require__(179)   ],
-  [ 'smartquotes',    __webpack_require__(180)    ]
+  [ 'normalize',      __webpack_require__(181)      ],
+  [ 'block',          __webpack_require__(178)          ],
+  [ 'inline',         __webpack_require__(179)         ],
+  [ 'linkify',        __webpack_require__(180)        ],
+  [ 'replacements',   __webpack_require__(182)   ],
+  [ 'smartquotes',    __webpack_require__(183)    ]
 ];
 
 
@@ -52678,14 +52702,14 @@ Core.prototype.process = function (state) {
   }
 };
 
-Core.prototype.State = __webpack_require__(181);
+Core.prototype.State = __webpack_require__(184);
 
 
 module.exports = Core;
 
 
 /***/ },
-/* 158 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52697,31 +52721,31 @@ module.exports = Core;
 'use strict';
 
 
-var Ruler           = __webpack_require__(9);
+var Ruler           = __webpack_require__(10);
 
 
 ////////////////////////////////////////////////////////////////////////////////
 // Parser rules
 
 var _rules = [
-  [ 'text',            __webpack_require__(192) ],
-  [ 'newline',         __webpack_require__(190) ],
-  [ 'escape',          __webpack_require__(186) ],
-  [ 'backticks',       __webpack_require__(183) ],
+  [ 'text',            __webpack_require__(195) ],
+  [ 'newline',         __webpack_require__(193) ],
+  [ 'escape',          __webpack_require__(189) ],
+  [ 'backticks',       __webpack_require__(186) ],
   [ 'strikethrough',   __webpack_require__(18).tokenize ],
   [ 'emphasis',        __webpack_require__(17).tokenize ],
-  [ 'link',            __webpack_require__(189) ],
-  [ 'image',           __webpack_require__(188) ],
-  [ 'autolink',        __webpack_require__(182) ],
-  [ 'html_inline',     __webpack_require__(187) ],
-  [ 'entity',          __webpack_require__(185) ]
+  [ 'link',            __webpack_require__(192) ],
+  [ 'image',           __webpack_require__(191) ],
+  [ 'autolink',        __webpack_require__(185) ],
+  [ 'html_inline',     __webpack_require__(190) ],
+  [ 'entity',          __webpack_require__(188) ]
 ];
 
 var _rules2 = [
-  [ 'balance_pairs',   __webpack_require__(184) ],
+  [ 'balance_pairs',   __webpack_require__(187) ],
   [ 'strikethrough',   __webpack_require__(18).postProcess ],
   [ 'emphasis',        __webpack_require__(17).postProcess ],
-  [ 'text_collapse',   __webpack_require__(193) ]
+  [ 'text_collapse',   __webpack_require__(196) ]
 ];
 
 
@@ -52862,14 +52886,14 @@ ParserInline.prototype.parse = function (str, md, env, outTokens) {
 };
 
 
-ParserInline.prototype.State = __webpack_require__(191);
+ParserInline.prototype.State = __webpack_require__(194);
 
 
 module.exports = ParserInline;
 
 
 /***/ },
-/* 159 */
+/* 162 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -52956,7 +52980,7 @@ module.exports = {
 
 
 /***/ },
-/* 160 */
+/* 163 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -53004,7 +53028,7 @@ module.exports = {
 
 
 /***/ },
-/* 161 */
+/* 164 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -53073,7 +53097,7 @@ module.exports = {
 
 
 /***/ },
-/* 162 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53415,7 +53439,7 @@ module.exports = Renderer;
 
 
 /***/ },
-/* 163 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53596,7 +53620,7 @@ module.exports = function blockquote(state, startLine, endLine, silent) {
 
 
 /***/ },
-/* 164 */
+/* 167 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -53647,7 +53671,7 @@ module.exports = function code(state, startLine, endLine/*, silent*/) {
 
 
 /***/ },
-/* 165 */
+/* 168 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -53745,7 +53769,7 @@ module.exports = function fence(state, startLine, endLine, silent) {
 
 
 /***/ },
-/* 166 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53804,7 +53828,7 @@ module.exports = function heading(state, startLine, endLine, silent) {
 
 
 /***/ },
-/* 167 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53853,7 +53877,7 @@ module.exports = function hr(state, startLine, endLine, silent) {
 
 
 /***/ },
-/* 168 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53862,7 +53886,7 @@ module.exports = function hr(state, startLine, endLine, silent) {
 'use strict';
 
 
-var block_names = __webpack_require__(153);
+var block_names = __webpack_require__(156);
 var HTML_OPEN_CLOSE_TAG_RE = __webpack_require__(16).HTML_OPEN_CLOSE_TAG_RE;
 
 // An array of opening and corresponding closing sequences for html tags,
@@ -53931,7 +53955,7 @@ module.exports = function html_block(state, startLine, endLine, silent) {
 
 
 /***/ },
-/* 169 */
+/* 172 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -54013,7 +54037,7 @@ module.exports = function lheading(state, startLine, endLine/*, silent*/) {
 
 
 /***/ },
-/* 170 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54330,7 +54354,7 @@ module.exports = function list(state, startLine, endLine, silent) {
 
 
 /***/ },
-/* 171 */
+/* 174 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -54384,7 +54408,7 @@ module.exports = function paragraph(state, startLine/*, endLine*/) {
 
 
 /***/ },
-/* 172 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54582,7 +54606,7 @@ module.exports = function reference(state, startLine, _endLine, silent) {
 
 
 /***/ },
-/* 173 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54590,7 +54614,7 @@ module.exports = function reference(state, startLine, _endLine, silent) {
 
 'use strict';
 
-var Token = __webpack_require__(10);
+var Token = __webpack_require__(11);
 var isSpace = __webpack_require__(1).isSpace;
 
 
@@ -54796,7 +54820,7 @@ module.exports = StateBlock;
 
 
 /***/ },
-/* 174 */
+/* 177 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -54977,7 +55001,7 @@ module.exports = function table(state, startLine, endLine, silent) {
 
 
 /***/ },
-/* 175 */
+/* 178 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -55000,7 +55024,7 @@ module.exports = function block(state) {
 
 
 /***/ },
-/* 176 */
+/* 179 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -55020,7 +55044,7 @@ module.exports = function inline(state) {
 
 
 /***/ },
-/* 177 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55160,7 +55184,7 @@ module.exports = function linkify(state) {
 
 
 /***/ },
-/* 178 */
+/* 181 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -55187,7 +55211,7 @@ module.exports = function inline(state) {
 
 
 /***/ },
-/* 179 */
+/* 182 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -55301,7 +55325,7 @@ module.exports = function replace(state) {
 
 
 /***/ },
-/* 180 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55501,7 +55525,7 @@ module.exports = function smartquotes(state) {
 
 
 /***/ },
-/* 181 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55509,7 +55533,7 @@ module.exports = function smartquotes(state) {
 //
 'use strict';
 
-var Token = __webpack_require__(10);
+var Token = __webpack_require__(11);
 
 
 function StateCore(src, md, env) {
@@ -55528,7 +55552,7 @@ module.exports = StateCore;
 
 
 /***/ },
-/* 182 */
+/* 185 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -55607,7 +55631,7 @@ module.exports = function autolink(state, silent) {
 
 
 /***/ },
-/* 183 */
+/* 186 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -55657,7 +55681,7 @@ module.exports = function backtick(state, silent) {
 
 
 /***/ },
-/* 184 */
+/* 187 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -55700,7 +55724,7 @@ module.exports = function link_pairs(state) {
 
 
 /***/ },
-/* 185 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55755,7 +55779,7 @@ module.exports = function entity(state, silent) {
 
 
 /***/ },
-/* 186 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55814,7 +55838,7 @@ module.exports = function escape(state, silent) {
 
 
 /***/ },
-/* 187 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55868,7 +55892,7 @@ module.exports = function html_inline(state, silent) {
 
 
 /***/ },
-/* 188 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55876,7 +55900,7 @@ module.exports = function html_inline(state, silent) {
 
 'use strict';
 
-var parseLinkLabel       = __webpack_require__(8);
+var parseLinkLabel       = __webpack_require__(9);
 var parseLinkDestination = __webpack_require__(4);
 var parseLinkTitle       = __webpack_require__(5);
 var normalizeReference   = __webpack_require__(1).normalizeReference;
@@ -56030,7 +56054,7 @@ module.exports = function image(state, silent) {
 
 
 /***/ },
-/* 189 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56038,7 +56062,7 @@ module.exports = function image(state, silent) {
 
 'use strict';
 
-var parseLinkLabel       = __webpack_require__(8);
+var parseLinkLabel       = __webpack_require__(9);
 var parseLinkDestination = __webpack_require__(4);
 var parseLinkTitle       = __webpack_require__(5);
 var normalizeReference   = __webpack_require__(1).normalizeReference;
@@ -56184,7 +56208,7 @@ module.exports = function link(state, silent) {
 
 
 /***/ },
-/* 190 */
+/* 193 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -56230,7 +56254,7 @@ module.exports = function newline(state, silent) {
 
 
 /***/ },
-/* 191 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56239,7 +56263,7 @@ module.exports = function newline(state, silent) {
 'use strict';
 
 
-var Token          = __webpack_require__(10);
+var Token          = __webpack_require__(11);
 var isWhiteSpace   = __webpack_require__(1).isWhiteSpace;
 var isPunctChar    = __webpack_require__(1).isPunctChar;
 var isMdAsciiPunct = __webpack_require__(1).isMdAsciiPunct;
@@ -56367,7 +56391,7 @@ module.exports = StateInline;
 
 
 /***/ },
-/* 192 */
+/* 195 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -56463,7 +56487,7 @@ module.exports = function text(state, silent) {
 
 
 /***/ },
-/* 193 */
+/* 196 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -56503,7 +56527,7 @@ module.exports = function text_collapse(state) {
 
 
 /***/ },
-/* 194 */
+/* 197 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -56632,7 +56656,7 @@ module.exports = decode;
 
 
 /***/ },
-/* 195 */
+/* 198 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -56737,7 +56761,7 @@ module.exports = encode;
 
 
 /***/ },
-/* 196 */
+/* 199 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -56769,7 +56793,7 @@ module.exports = function format(url) {
 
 
 /***/ },
-/* 197 */
+/* 200 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -57088,7 +57112,7 @@ module.exports = urlParse;
 
 
 /***/ },
-/* 198 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 var map = {
@@ -57309,14 +57333,14 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 198;
+webpackContext.id = 201;
 
 
 /***/ },
-/* 199 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(148)
+var isarray = __webpack_require__(151)
 
 /**
  * Expose `pathToRegexp`.
@@ -57709,7 +57733,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ },
-/* 200 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -58247,7 +58271,7 @@ function pathToRegexp (path, keys, options) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module), __webpack_require__(6)))
 
 /***/ },
-/* 201 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58420,7 +58444,7 @@ module.exports = function (str, opts) {
 
 
 /***/ },
-/* 202 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58564,7 +58588,7 @@ module.exports = function (object, opts) {
 
 
 /***/ },
-/* 203 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
@@ -59819,7 +59843,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**!
 
 
 /***/ },
-/* 204 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 /**
@@ -60172,7 +60196,7 @@ exports.send = function(data){
 
 
 /***/ },
-/* 205 */
+/* 208 */
 /***/ function(module, exports) {
 
 // The node and browser modules expose versions of this with the
@@ -60210,33 +60234,33 @@ module.exports = request;
 
 
 /***/ },
-/* 206 */
+/* 209 */
 /***/ function(module, exports) {
 
 module.exports=/[\xAD\u0600-\u0605\u061C\u06DD\u070F\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804\uDCBD|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F]/
 
 /***/ },
-/* 207 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 
 module.exports.Any = __webpack_require__(126);
 module.exports.Cc  = __webpack_require__(124);
-module.exports.Cf  = __webpack_require__(206);
-module.exports.P   = __webpack_require__(12);
+module.exports.Cf  = __webpack_require__(209);
+module.exports.P   = __webpack_require__(13);
 module.exports.Z   = __webpack_require__(125);
 
 
 /***/ },
-/* 208 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
-var superagent = __webpack_require__(11);
+var superagent = __webpack_require__(12);
 var Abstract = __webpack_require__(127);
 
 var _ = __webpack_require__(3);
 
-var Chain = __webpack_require__(13);
+var Chain = __webpack_require__(14);
 
 var Answers = Abstract.extends({
 
@@ -60304,15 +60328,15 @@ module.exports = Answers;
 
 
 /***/ },
-/* 209 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-var superagent = __webpack_require__(11);
+var superagent = __webpack_require__(12);
 var Abstract = __webpack_require__(127);
 
 var _ = __webpack_require__(3);
 
-var Chain = __webpack_require__(13);
+var Chain = __webpack_require__(14);
 
 var Questions = Abstract.extends({
 
@@ -60370,6 +60394,31 @@ var Questions = Abstract.extends({
 
         });
 
+    },
+
+    post: function (question) {
+
+        var that = this;
+
+        return new Promise(function (resolve, reject) {
+            var request = superagent.post(that._base + '/questions');
+
+            request.send(question);
+
+            request.end(function (err, res) {
+
+                if (err) {
+                    return reject(err);
+                }
+
+                var body = res.body;
+
+                resolve(body.result);
+
+            });
+        });
+
+
     }
 
 });
@@ -60378,14 +60427,14 @@ module.exports = Questions;
 
 
 /***/ },
-/* 210 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Abstract = __webpack_require__(2);
 
 var moment = __webpack_require__(0);
 
-var markdown = __webpack_require__(14)();
+var markdown = __webpack_require__(8)();
 
 module.exports = {
     template: __webpack_require__(140),
@@ -60446,7 +60495,7 @@ module.exports = {
 
 
 /***/ },
-/* 211 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Abstract = __webpack_require__(2);
@@ -60471,7 +60520,7 @@ module.exports = Abstract.extend({
 
 
 /***/ },
-/* 212 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Abstract = __webpack_require__(2);
@@ -60528,13 +60577,151 @@ module.exports = {
 
 
 /***/ },
-/* 213 */
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
+var Abstract = __webpack_require__(2);
+
+var moment = __webpack_require__(0);
+
+var markdown = __webpack_require__(8)();
+
+module.exports = Abstract.extend({
+    template: __webpack_require__(145),
+
+    data: function() {
+        return {
+            loading: true,
+
+            question: {
+                title: null,
+                text: null
+            }
+
+        };
+    },
+
+    computed: {
+        renderedText: function () {
+            if (!this.question.text) {
+                return '';
+            }
+
+            return markdown.render(this.question.text);
+        },
+        datetime: function () {
+            return moment.unix(this.question.creationDate).fromNow();
+        }
+    },
+
+    ready: function() {
+        var that = this;
+
+        var req = this.getRequest();
+
+        this.loading = false;
+
+
+    },
+
+    beforeDestroy: function () {
+
+    },
+
+    methods: {
+        postQuestion: function (question) {
+
+            var that = this;
+
+            this.getApi().questions.post(question)
+                .then(function (question) {
+                    that.$refs.questionForm.$emit('questionSent', question);
+                })
+                .catch(function (error) {
+                    this.loading = false;
+                    that.logError(error);
+                });
+
+            // this.getApi().answers.postAnswer(this.question.id, text)
+            //     .then(function (answer) {
+            //         that.answersData.answers.push(answer);
+            //         that.answerCount++;
+            //         that.$refs.answerForm.$emit('answerSent');
+            //     })
+            //     .catch(function (error) {
+            //         that.logError(error);
+            //     });
+        }
+    },
+
+    components: {
+        questionForm: Abstract.extend({
+
+            template: __webpack_require__(146),
+
+            data: function () {
+                return {
+                    loading: false,
+                    title: null,
+                    text: null,
+                    error: null,
+                    questionSent: false,
+                    id: null
+                };
+            },
+
+            events: {
+                questionSent: function (question) {
+                    this.loading = false;
+                    this.title = null;
+                    this.text = null;
+                    this.error = null;
+                    this.id = question.id;
+                    this.questionSent = true;
+
+                }
+            },
+
+            methods: {
+                post: function (event) {
+                    event.preventDefault();
+
+                    if (typeof this.title === 'string') {
+                        this.title = this.title.trim();
+                    }
+
+                    if (!this.title) {
+                        this.error = 'Question title required';
+                        return;
+                    }
+
+                    if (typeof this.text === 'string') {
+                        this.text = this.text.trim();
+                    }
+
+                    if (!this.text) {
+                        this.error = 'Question text required';
+                        return;
+                    }
+
+                    this.loading = true;
+
+                    this.$emit('question_post', {title: this.title, text: this.text});
+                },
+            }
+        })
+    }
+});
+
+
+/***/ },
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Abstract = __webpack_require__(2);
 
 module.exports = Abstract.extend({
-    template: __webpack_require__(145),
+    template: __webpack_require__(147),
 
     components: {
 
@@ -60547,14 +60734,14 @@ module.exports = Abstract.extend({
 
 
 /***/ },
-/* 214 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Abstract = __webpack_require__(2);
 var moment = __webpack_require__(0);
 
 module.exports = Abstract.extend({
-    template: __webpack_require__(146),
+    template: __webpack_require__(148),
 
     data: function() {
         return {
@@ -60591,23 +60778,23 @@ module.exports = Abstract.extend({
     },
 
     components: {
-        questions: __webpack_require__(212),
+        questions: __webpack_require__(215),
     }
 });
 
 
 /***/ },
-/* 215 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Abstract = __webpack_require__(2);
 
 var moment = __webpack_require__(0);
 
-var markdown = __webpack_require__(14)();
+var markdown = __webpack_require__(8)();
 
 module.exports = Abstract.extend({
-    template: __webpack_require__(147),
+    template: __webpack_require__(150),
 
     data: function() {
         return {
@@ -60646,6 +60833,8 @@ module.exports = Abstract.extend({
 
     ready: function() {
         var that = this;
+
+        this.scrollTop();
 
         var req = this.getRequest();
 
@@ -60695,10 +60884,10 @@ module.exports = Abstract.extend({
     },
 
     components: {
-        answers: __webpack_require__(210),
+        answers: __webpack_require__(213),
         answerForm: {
 
-            template: __webpack_require__(217),
+            template: __webpack_require__(149),
 
             data: function () {
                 return {
@@ -60739,7 +60928,7 @@ module.exports = Abstract.extend({
 
 
 /***/ },
-/* 216 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 var _ = __webpack_require__(3);
@@ -60825,12 +61014,6 @@ _.each(routes, function (route) {
 page({click: false});
 
 
-/***/ },
-/* 217 */
-/***/ function(module, exports) {
-
-module.exports = "<div class=\"ui form\">\n    <div class=\"ui message\" v-show=\"error\">\n        <div class=\"header\">We had some errors</div>\n        <ul class=\"list\">\n          <li>{{error}}</li>\n        </ul>\n    </div>\n    <div class=\"field\" v-show=\"!answerSent\" :class=\"{error: error}\">\n        <textarea v-model=\"text\"></textarea>\n    </div>\n\n    <button\n        v-show=\"!answerSent\"\n        class=\"ui button\"\n        type=\"submit\"\n        v-on:click=\"postAnswer($event)\">Post answer</button>\n\n    <div v-show=\"answerSent\" class=\"ui small header\">Your answer posted successfully</div>\n    <button v-show=\"answerSent\" class=\"ui button\" v-on:click=\"oneMoreAnswer($event)\">Post one more answer</button>\n</div>";
-
 /***/ }
-],[216]);
+],[220]);
 //# sourceMappingURL=app.bundle.js.map

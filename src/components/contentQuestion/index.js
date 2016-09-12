@@ -45,6 +45,8 @@ module.exports = Abstract.extend({
     ready: function() {
         var that = this;
 
+        this.scrollTop();
+
         var req = this.getRequest();
 
         this.getApi().questions.get(req.params.id)
